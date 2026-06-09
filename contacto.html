@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — TurismoIca</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">✦</span> TurismoIca
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html" class="btn-nav active-nav">Contáctanos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero-contact">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="hero-badge">Hablemos</span>
+      <h1 class="hero-title">Estamos aquí<br />para ayudarte</h1>
+      <p class="hero-sub">Cuéntanos qué tipo de aventura tienes en mente y nuestros guías te armarán el itinerario perfecto.</p>
+    </div>
+  </section>
+
+  <!-- BLOQUE PRINCIPAL -->
+  <section class="section contacto-section">
+    <div class="container contacto-inner">
+
+      <!-- FORMULARIO -->
+      <div class="contacto-form-wrap">
+        <div class="form-header">
+          <span class="section-tag">Escríbenos</span>
+          <h2 class="section-title" style="text-align:left;">Cuéntanos tu<br />próxima aventura</h2>
+          <p>Respondemos en menos de 24 horas. Sin compromiso.</p>
+        </div>
+
+        <form class="contacto-form" id="contactoForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. María García" required />
+              <span class="form-error" id="err-nombre"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+              <span class="form-error" id="err-email"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefono">Teléfono / WhatsApp</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+51 999 000 000" />
+            </div>
+            <div class="form-group">
+              <label for="personas">N° de personas</label>
+              <select id="personas" name="personas">
+                <option value="">Selecciona</option>
+                <option>1 persona</option>
+                <option>2 personas</option>
+                <option>3 - 5 personas</option>
+                <option>6 - 10 personas</option>
+                <option>Más de 10</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Destino de interés</label>
+            <div class="destino-chips" id="destinoChips">
+              <button type="button" class="chip" data-val="huacachina">🏜️ Huacachina</button>
+              <button type="button" class="chip" data-val="nazca">🦅 Líneas de Nazca</button>
+              <button type="button" class="chip" data-val="paracas">🌊 Paracas</button>
+              <button type="button" class="chip" data-val="ballestas">🐧 Islas Ballestas</button>
+              <button type="button" class="chip" data-val="pisco">🍇 Bodegas de Pisco</button>
+              <button type="button" class="chip" data-val="completo">✦ Tour completo</button>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fecha">Fecha estimada de viaje</label>
+              <input type="date" id="fecha" name="fecha" />
+            </div>
+            <div class="form-group">
+              <label for="presupuesto">Presupuesto por persona</label>
+              <select id="presupuesto" name="presupuesto">
+                <option value="">Selecciona</option>
+                <option>Menos de S/ 100</option>
+                <option>S/ 100 – S/ 250</option>
+                <option>S/ 250 – S/ 500</option>
+                <option>Más de S/ 500</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje o consulta *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué tipo de experiencia buscas, si tienes alguna restricción especial, o cualquier duda..." required></textarea>
+            <span class="form-error" id="err-mensaje"></span>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" id="terminos" name="terminos" required />
+            <label for="terminos">Acepto la <a href="#">política de privacidad</a> y que me contacten por esta consulta.</label>
+          </div>
+          <span class="form-error" id="err-terminos"></span>
+
+          <button type="submit" class="btn-primary btn-submit">
+            <span class="btn-text">Enviar consulta</span>
+            <span class="btn-icon">→</span>
+          </button>
+
+        </form>
+
+        <!-- ÉXITO -->
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">✓</div>
+          <h3>¡Mensaje enviado!</h3>
+          <p>Gracias por escribirnos. Un miembro de nuestro equipo se pondrá en contacto contigo en menos de 24 horas.</p>
+          <a href="servicios.html" class="btn-primary">Ver nuestros tours</a>
+        </div>
+      </div>
+
+      <!-- INFO DE CONTACTO -->
+      <aside class="contacto-info">
+
+        <div class="info-card">
+          <div class="info-icon" style="background: linear-gradient(135deg, #c0622b, #8b3a10);">📍</div>
+          <div>
+            <h4>Oficina principal</h4>
+            <p>Av. Grau 123, Ica<br />Región Ica, Perú</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon" style="background: linear-gradient(135deg, #2d7a52, #1a4a30);">📞</div>
+          <div>
+            <h4>Teléfono &amp; WhatsApp</h4>
+            <p>+51 956 123 456<br /><span class="info-sub">Lun–Dom · 7am – 8pm</span></p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon" style="background: linear-gradient(135deg, #2a6496, #1a3a6a);">✉️</div>
+          <div>
+            <h4>Correo electrónico</h4>
+            <p>hola@turismoica.pe<br /><span class="info-sub">Respuesta en &lt; 24 h</span></p>
+          </div>
+        </div>
+
+        <div class="info-horarios">
+          <h4>Horarios de atención</h4>
+          <div class="horario-row">
+            <span>Lunes – Viernes</span>
+            <strong>7:00 – 20:00</strong>
+          </div>
+          <div class="horario-row">
+            <span>Sábado</span>
+            <strong>7:00 – 18:00</strong>
+          </div>
+          <div class="horario-row">
+            <span>Domingo</span>
+            <strong>8:00 – 16:00</strong>
+          </div>
+          <div class="horario-nota">
+            <span>⚡</span> Tours disponibles los 365 días del año
+          </div>
+        </div>
+
+        <div class="info-mapa">
+          <div class="mapa-placeholder">
+            <div class="mapa-pin">📍</div>
+            <p>Av. Grau 123, Ica</p>
+            <span>Ica, Perú</span>
+          </div>
+        </div>
+
+        <div class="info-redes">
+          <h4>Síguenos</h4>
+          <div class="redes-row">
+            <a href="#" class="red-btn red-ig">📸 Instagram</a>
+            <a href="#" class="red-btn red-fb">👍 Facebook</a>
+            <a href="#" class="red-btn red-yt">▶️ YouTube</a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Preguntas frecuentes</span>
+        <h2 class="section-title">Todo lo que necesitas saber</h2>
+      </div>
+      <div class="faq-grid">
+
+        <details class="faq-item">
+          <summary>¿Con cuánta anticipación debo reservar?</summary>
+          <p>Recomendamos reservar con al menos 48 horas de anticipación, especialmente en temporada alta (julio–agosto y diciembre–enero). Para grupos de más de 6 personas, con 1 semana de anticipación.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Los tours incluyen transporte desde Lima?</summary>
+          <p>Sí, ofrecemos paquetes con traslado desde Lima (4h en bus o 45 min en avión). Consúltanos el paquete que incluya traslado desde la capital al momento de hacer tu reserva.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué pasa si el clima no acompaña?</summary>
+          <p>Ica tiene más de 300 días de sol al año, por lo que rara vez hay cancelaciones por clima. Si ocurriese, reagendamos sin costo adicional o te devolvemos el 100% del pago.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Los tours son aptos para niños y adultos mayores?</summary>
+          <p>La mayoría de nuestros tours tienen versiones adaptadas para todas las edades. Los tours de aventura intensa (buggy, sandboard) tienen restricciones para menores de 8 años y adultos con condiciones médicas específicas.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué formas de pago aceptan?</summary>
+          <p>Aceptamos efectivo (soles y dólares), transferencia bancaria, Yape, Plin y tarjetas de crédito/débito. Se requiere un depósito del 30% para confirmar la reserva.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Los guías hablan inglés?</summary>
+          <p>Sí, contamos con guías certificados en español, inglés y portugués. Para otros idiomas, contáctanos con anticipación y gestionamos un intérprete.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-light">
+          <span class="logo-icon">✦</span> TurismoIca
+        </a>
+        <p>Descubre la magia del desierto peruano con los mejores guías locales.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Páginas</h4>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-links">
+        <h4>Destinos</h4>
+        <a href="servicios.html">Huacachina</a>
+        <a href="servicios.html">Líneas de Nazca</a>
+        <a href="servicios.html">Paracas</a>
+        <a href="servicios.html">Islas Ballestas</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p>📍 Av. Grau 123, Ica, Perú</p>
+        <p>📞 +51 956 123 456</p>
+        <p>✉️ hola@turismoica.pe</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 TurismoIca. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Chips de destino ── */
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => chip.classList.toggle('chip-active'));
+    });
+
+    /* ── Validación y envío ── */
+    const form = document.getElementById('contactoForm');
+    const success = document.getElementById('formSuccess');
+
+    function showError(id, msg) {
+      const el = document.getElementById(id);
+      if (el) { el.textContent = msg; el.style.display = msg ? 'block' : 'none'; }
+    }
+    function clearErrors() {
+      ['err-nombre','err-email','err-mensaje','err-terminos'].forEach(id => showError(id, ''));
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      clearErrors();
+
+      const nombre   = form.nombre.value.trim();
+      const email    = form.email.value.trim();
+      const mensaje  = form.mensaje.value.trim();
+      const terminos = form.terminos.checked;
+      let valid = true;
+
+      if (!nombre) { showError('err-nombre', 'Por favor ingresa tu nombre.'); valid = false; }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showError('err-email', 'Ingresa un correo electrónico válido.'); valid = false;
+      }
+      if (!mensaje) { showError('err-mensaje', 'Por favor escribe tu consulta.'); valid = false; }
+      if (!terminos) { showError('err-terminos', 'Debes aceptar la política de privacidad.'); valid = false; }
+
+      if (valid) {
+        form.style.display = 'none';
+        success.style.display = 'flex';
+      }
+    });
+
+    /* ── Highlight inputs al hacer focus ── */
+    document.querySelectorAll('input, textarea, select').forEach(el => {
+      el.addEventListener('focus', () => el.closest('.form-group')?.classList.add('focused'));
+      el.addEventListener('blur',  () => el.closest('.form-group')?.classList.remove('focused'));
+    });
+  </script>
+
+</body>
+</html>
