@@ -24,8 +24,18 @@
         <a href="galeria.html" class="active">Galería</a>
         <a href="contacto.html" class="btn-nav">Contáctanos</a>
       </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html" class="active">Galería</a>
+    <a href="contacto.html" class="btn-nav-mobile">Contáctanos</a>
+  </nav>
 
   <!-- PAGE HERO -->
   <section class="page-hero page-hero-gallery">
@@ -283,40 +293,74 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo logo-light">
-          <span class="logo-icon">✦</span> TurismoIca
-        </a>
-        <p>Descubre la magia del desierto peruano con los mejores guías locales.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Páginas</h4>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="galeria.html">Galería</a>
-        <a href="contacto.html">Contacto</a>
-      </div>
-      <div class="footer-links">
-        <h4>Destinos</h4>
-        <a href="servicios.html">Huacachina</a>
-        <a href="servicios.html">Líneas de Nazca</a>
-        <a href="servicios.html">Paracas</a>
-        <a href="servicios.html">Islas Ballestas</a>
-      </div>
-      <div class="footer-contact">
-        <h4>Contacto</h4>
-        <p>📍 Av. Grau 123, Ica, Perú</p>
-        <p>📞 +51 956 123 456</p>
-        <p>✉️ hola@turismoica.pe</p>
+    <div class="footer-top-bar"></div>
+    <div class="footer-main">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="logo logo-light">
+            <span class="logo-icon">✦</span> TurismoIca
+          </a>
+          <p>Descubre la magia del desierto peruano con los mejores guías locales de Ica.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+            <a href="#" class="social-btn" aria-label="Facebook">👍</a>
+            <a href="#" class="social-btn" aria-label="YouTube">▶️</a>
+            <a href="#" class="social-btn" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Páginas</h4>
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="galeria.html">Galería</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-col">
+          <h4>Destinos</h4>
+          <a href="servicios.html">Huacachina</a>
+          <a href="servicios.html">Líneas de Nazca</a>
+          <a href="servicios.html">Paracas</a>
+          <a href="servicios.html">Islas Ballestas</a>
+          <a href="servicios.html">Bodegas de Pisco</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <div class="footer-contact-item"><span>📍</span><span>Av. Grau 123, Ica, Perú</span></div>
+          <div class="footer-contact-item"><span>📞</span><span>+51 956 123 456</span></div>
+          <div class="footer-contact-item"><span>✉️</span><span>hola@turismoica.pe</span></div>
+          <div class="footer-contact-item"><span>🕐</span><span>Lun–Dom · 7am – 8pm</span></div>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="container footer-bottom">
       <p>© 2025 TurismoIca. Todos los derechos reservados.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
     </div>
   </footer>
 
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">↑</button>
+  <script>
+    const _nav = document.querySelector('.navbar');
+    const _top = document.getElementById('scrollTop');
+    const _tog = document.getElementById('navToggle');
+    const _mob = document.getElementById('navMobile');
+    window.addEventListener('scroll', () => {
+      _nav.classList.toggle('scrolled', window.scrollY > 20);
+      _top.classList.toggle('visible', window.scrollY > 300);
+    }, { passive: true });
+    _top.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    _tog.addEventListener('click', () => { _tog.classList.toggle('open'); _mob.classList.toggle('open'); });
+    document.addEventListener('click', e => {
+      if (!_tog.contains(e.target) && !_mob.contains(e.target)) {
+        _tog.classList.remove('open'); _mob.classList.remove('open');
+      }
+    });
+  </script>
   <script>
     const btns = document.querySelectorAll('.filter-btn');
     const items = document.querySelectorAll('.galeria-item');
