@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios — TurismoIca</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">✦</span> TurismoIca
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html" class="active">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html" class="btn-nav">Contáctanos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero-servicios">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="hero-badge">Nuestros tours</span>
+      <h1 class="hero-title">Experiencias diseñadas<br />para no olvidar</h1>
+      <p class="hero-sub">Desde la adrenalina de las dunas hasta la calma del océano. Elige tu aventura.</p>
+      <div class="hero-actions">
+        <a href="#tours" class="btn-primary">Ver todos los tours</a>
+        <a href="contacto.html" class="btn-ghost">Consultar fechas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTROS DE TOURS -->
+  <section class="galeria-filters-section">
+    <div class="container">
+      <div class="galeria-filters" id="tourFiltros">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="aventura">Aventura</button>
+        <button class="filter-btn" data-filter="cultura">Cultura</button>
+        <button class="filter-btn" data-filter="naturaleza">Naturaleza</button>
+        <button class="filter-btn" data-filter="gastronomia">Gastronomía</button>
+        <button class="filter-btn" data-filter="premium">Premium</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOURS -->
+  <section class="section servicios-section" id="tours">
+    <div class="container">
+
+      <div class="tours-grid" id="toursGrid">
+
+        <!-- TOUR 1: HUACACHINA CLÁSICO -->
+        <article class="tour-card" data-cat="aventura">
+          <div class="tour-header" style="background: linear-gradient(160deg, #e8c547 0%, #c08a20 50%, #7a4a10 100%);">
+            <div class="tour-emoji-wrap">🏜️</div>
+            <div class="tour-badge-popular">Más popular</div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta">
+              <span class="tour-cat cat-aventura">Aventura</span>
+              <span class="tour-duracion">⏱ 1 día</span>
+            </div>
+            <h3>Huacachina: Buggy &amp; Sandboard</h3>
+            <p>Vive la adrenalina de las dunas más altas del continente. Buggy 4x4, sandboard al atardecer y vista al oasis desde las cimas.</p>
+            <ul class="tour-incluye">
+              <li>✓ Transporte desde Ica ciudad</li>
+              <li>✓ Guía certificado</li>
+              <li>✓ Buggy + tabla de sandboard</li>
+              <li>✓ Seguro de actividad</li>
+            </ul>
+            <div class="tour-footer">
+              <div class="tour-precio">
+                <span class="precio-desde">Desde</span>
+                <strong>S/ 85</strong>
+                <span class="precio-pp">por persona</span>
+              </div>
+              <a href="contacto.html" class="btn-primary">Reservar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOUR 2: NAZCA SOBREVUELO -->
+        <article class="tour-card tour-card-highlight" data-cat="cultura">
+          <div class="tour-header" style="background: linear-gradient(160deg, #6a8abf 0%, #2a5a9a 50%, #0a2a6a 100%);">
+            <div class="tour-emoji-wrap">✈️</div>
+            <div class="tour-badge-popular tour-badge-premium">⭐ Premium</div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta">
+              <span class="tour-cat cat-cultura">Cultura</span>
+              <span class="tour-duracion">⏱ 1 día</span>
+            </div>
+            <h3>Sobrevuelo Líneas de Nazca</h3>
+            <p>Observa desde el aire los enigmáticos geoglifos de Nazca: el Cóndor, el Mono, la Araña y más de 15 figuras declaradas Patrimonio UNESCO.</p>
+            <ul class="tour-incluye">
+              <li>✓ Vuelo en avioneta (30 min)</li>
+              <li>✓ Guía arqueólogo certificado</li>
+              <li>✓ Traslado Ica–Nazca–Ica</li>
+              <li>✓ Mirador terrestre incluido</li>
+            </ul>
+            <div class="tour-footer">
+              <div class="tour-precio">
+                <span class="precio-desde">Desde</span>
+                <strong>S/ 320</strong>
+                <span class="precio-pp">por persona</span>
+              </div>
+              <a href="contacto.html" class="btn-primary">Reservar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOUR 3: PARACAS + BALLESTAS -->
+        <article class="tour-card" data-cat="naturaleza">
+          <div class="tour-header" style="background: linear-gradient(160deg, #5ab8e8 0%, #1a6a9a 50%, #0a2a5a 100%);">
+            <div class="tour-emoji-wrap">🌊</div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta">
+              <span class="tour-cat cat-naturaleza">Naturaleza</span>
+              <span class="tour-duracion">⏱ 1 día</span>
+            </div>
+            <h3>Paracas &amp; Islas Ballestas</h3>
+            <p>Navega hasta las "Galápagos peruanas" para avistar lobos marinos, pingüinos y cóndores. Por la tarde, explora la Reserva Nacional de Paracas.</p>
+            <ul class="tour-incluye">
+              <li>✓ Lancha a Islas Ballestas</li>
+              <li>✓ Tour por la Reserva Paracas</li>
+              <li>✓ Guía bióloga marina</li>
+              <li>✓ Almuerzo en restaurante local</li>
+            </ul>
+            <div class="tour-footer">
+              <div class="tour-precio">
+                <span class="precio-desde">Desde</span>
+                <strong>S/ 140</strong>
+                <span class="precio-pp">por persona</span>
+              </div>
+              <a href="contacto.html" class="btn-primary">Reservar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOUR 4: RUTA DEL PISCO -->
+        <article class="tour-card" data-cat="gastronomia">
+          <div class="tour-header" style="background: linear-gradient(160deg, #9a5abf 0%, #5a1a8a 50%, #2a0a4a 100%);">
+            <div class="tour-emoji-wrap">🍇</div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta">
+              <span class="tour-cat cat-gastronomia">Gastronomía</span>
+              <span class="tour-duracion">⏱ Medio día</span>
+            </div>
+            <h3>Ruta del Pisco &amp; Vino</h3>
+            <p>Visita 3 bodegas artesanales, conoce el proceso de elaboración del pisco peruano y disfruta de degustaciones guiadas por nuestra sommelier Ana Mori.</p>
+            <ul class="tour-incluye">
+              <li>✓ Visita a 3 bodegas históricas</li>
+              <li>✓ Degustación de 6 variedades</li>
+              <li>✓ Sommelier certificada</li>
+              <li>✓ Maridaje con quesos locales</li>
+            </ul>
+            <div class="tour-footer">
+              <div class="tour-precio">
+                <span class="precio-desde">Desde</span>
+                <strong>S/ 95</strong>
+                <span class="precio-pp">por persona</span>
+              </div>
+              <a href="contacto.html" class="btn-primary">Reservar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOUR 5: NOCHE EN EL DESIERTO -->
+        <article class="tour-card" data-cat="aventura">
+          <div class="tour-header" style="background: linear-gradient(160deg, #1a1020 0%, #2a1a4a 50%, #0a0a20 100%);">
+            <div class="tour-emoji-wrap">🌙</div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta">
+              <span class="tour-cat cat-aventura">Aventura</span>
+              <span class="tour-duracion">⏱ Noche</span>
+            </div>
+            <h3>Noche Estrellada en el Desierto</h3>
+            <p>Ica tiene uno de los cielos más despejados del mundo. Campamento bajo las estrellas, telescopios, fogata y cena tradicional iqueña en medio de las dunas.</p>
+            <ul class="tour-incluye">
+              <li>✓ Campamento con equipo completo</li>
+              <li>✓ Sesión de astronomía</li>
+              <li>✓ Cena tradicional iqueña</li>
+              <li>✓ Desayuno al amanecer</li>
+            </ul>
+            <div class="tour-footer">
+              <div class="tour-precio">
+                <span class="precio-desde">Desde</span>
+                <strong>S/ 210</strong>
+                <span class="precio-pp">por persona</span>
+              </div>
+              <a href="contacto.html" class="btn-primary">Reservar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOUR 6: PACK COMPLETO -->
+        <article class="tour-card tour-card-full" data-cat="premium">
+          <div class="tour-header tour-header-full" style="background: linear-gradient(160deg, #c0622b 0%, #8b3a10 40%, #2a1a0a 100%);">
+            <div class="tour-emoji-wrap" style="font-size:3.5rem;">✦</div>
+            <div class="tour-badge-popular tour-badge-premium">⭐ Premium</div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta">
+              <span class="tour-cat cat-premium">Premium</span>
+              <span class="tour-duracion">⏱ 3 días / 2 noches</span>
+            </div>
+            <h3>Pack Ica Completo</h3>
+            <p>La experiencia definitiva. Tres días recorriendo todo lo que Ica tiene para ofrecer: dunas, arqueología, naturaleza marina, bodegas y gastronomía local.</p>
+            <div class="tour-full-incluye">
+              <div class="full-col">
+                <strong>Día 1 — Huacachina</strong>
+                <ul class="tour-incluye">
+                  <li>✓ Buggy &amp; sandboard al atardecer</li>
+                  <li>✓ Noche estrellada en las dunas</li>
+                </ul>
+              </div>
+              <div class="full-col">
+                <strong>Día 2 — Nazca &amp; Paracas</strong>
+                <ul class="tour-incluye">
+                  <li>✓ Sobrevuelo Líneas de Nazca</li>
+                  <li>✓ Tour Reserva de Paracas</li>
+                </ul>
+              </div>
+              <div class="full-col">
+                <strong>Día 3 — Ballestas &amp; Pisco</strong>
+                <ul class="tour-incluye">
+                  <li>✓ Islas Ballestas en lancha</li>
+                  <li>✓ Ruta del pisco con sommelier</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tour-footer">
+              <div class="tour-precio">
+                <span class="precio-desde">Desde</span>
+                <strong>S/ 680</strong>
+                <span class="precio-pp">por persona · todo incluido</span>
+              </div>
+              <a href="contacto.html" class="btn-primary">Reservar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOUR 7: NAZCA TERRESTRE -->
+        <article class="tour-card" data-cat="cultura">
+          <div class="tour-header" style="background: linear-gradient(160deg, #d4a870 0%, #8a5a20 50%, #4a2a00 100%);">
+            <div class="tour-emoji-wrap">🏛️</div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta">
+              <span class="tour-cat cat-cultura">Cultura</span>
+              <span class="tour-duracion">⏱ 1 día</span>
+            </div>
+            <h3>Nazca Arqueológico Terrestre</h3>
+            <p>Recorre el Museo Didáctico Antonini, el cementerio de Chauchilla y el mirador de las líneas. La historia Nazca contada por un arqueólogo en terreno.</p>
+            <ul class="tour-incluye">
+              <li>✓ Museo Antonini</li>
+              <li>✓ Cementerio de Chauchilla</li>
+              <li>✓ Guía arqueólogo</li>
+              <li>✓ Almuerzo típico incluido</li>
+            </ul>
+            <div class="tour-footer">
+              <div class="tour-precio">
+                <span class="precio-desde">Desde</span>
+                <strong>S/ 120</strong>
+                <span class="precio-pp">por persona</span>
+              </div>
+              <a href="contacto.html" class="btn-primary">Reservar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOUR 8: FAMILIA -->
+        <article class="tour-card" data-cat="naturaleza">
+          <div class="tour-header" style="background: linear-gradient(160deg, #78d8a0 0%, #2a8a50 50%, #0a4a28 100%);">
+            <div class="tour-emoji-wrap">👨‍👩‍👧‍👦</div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-meta">
+              <span class="tour-cat cat-naturaleza">Naturaleza</span>
+              <span class="tour-duracion">⏱ 1 día</span>
+            </div>
+            <h3>Ica en Familia</h3>
+            <p>Tour diseñado especialmente para familias con niños. Actividades seguras, ritmo tranquilo, visitas al Museo Regional y paseo por el oasis de Huacachina.</p>
+            <ul class="tour-incluye">
+              <li>✓ Visita al Museo Regional de Ica</li>
+              <li>✓ Paseo en bote en Huacachina</li>
+              <li>✓ Sandboard suave para niños</li>
+              <li>✓ Guía con experiencia infantil</li>
+            </ul>
+            <div class="tour-footer">
+              <div class="tour-precio">
+                <span class="precio-desde">Desde</span>
+                <strong>S/ 65</strong>
+                <span class="precio-pp">por persona</span>
+              </div>
+              <a href="contacto.html" class="btn-primary">Reservar</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARADOR -->
+  <section class="section comparador-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">¿Cuál es el tuyo?</span>
+        <h2 class="section-title">Compara los tours<br />de un vistazo</h2>
+      </div>
+      <div class="tabla-wrap">
+        <table class="tabla-comparador">
+          <thead>
+            <tr>
+              <th>Tour</th>
+              <th>Duración</th>
+              <th>Dificultad</th>
+              <th>Grupo máx.</th>
+              <th>Precio</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Buggy &amp; Sandboard</strong></td>
+              <td>1 día</td>
+              <td><span class="dif dif-media">Media</span></td>
+              <td>12 personas</td>
+              <td><strong>S/ 85</strong></td>
+              <td><a href="contacto.html" class="tabla-btn">Reservar</a></td>
+            </tr>
+            <tr class="row-highlight">
+              <td><strong>Sobrevuelo Nazca</strong></td>
+              <td>1 día</td>
+              <td><span class="dif dif-baja">Baja</span></td>
+              <td>6 personas</td>
+              <td><strong>S/ 320</strong></td>
+              <td><a href="contacto.html" class="tabla-btn">Reservar</a></td>
+            </tr>
+            <tr>
+              <td><strong>Paracas &amp; Ballestas</strong></td>
+              <td>1 día</td>
+              <td><span class="dif dif-baja">Baja</span></td>
+              <td>15 personas</td>
+              <td><strong>S/ 140</strong></td>
+              <td><a href="contacto.html" class="tabla-btn">Reservar</a></td>
+            </tr>
+            <tr>
+              <td><strong>Ruta del Pisco</strong></td>
+              <td>Medio día</td>
+              <td><span class="dif dif-baja">Baja</span></td>
+              <td>10 personas</td>
+              <td><strong>S/ 95</strong></td>
+              <td><a href="contacto.html" class="tabla-btn">Reservar</a></td>
+            </tr>
+            <tr>
+              <td><strong>Noche Estrellada</strong></td>
+              <td>1 noche</td>
+              <td><span class="dif dif-media">Media</span></td>
+              <td>8 personas</td>
+              <td><strong>S/ 210</strong></td>
+              <td><a href="contacto.html" class="tabla-btn">Reservar</a></td>
+            </tr>
+            <tr class="row-highlight">
+              <td><strong>Pack Completo ✦</strong></td>
+              <td>3D / 2N</td>
+              <td><span class="dif dif-media">Media</span></td>
+              <td>8 personas</td>
+              <td><strong>S/ 680</strong></td>
+              <td><a href="contacto.html" class="tabla-btn tabla-btn-terra">Reservar</a></td>
+            </tr>
+            <tr>
+              <td><strong>Nazca Arqueológico</strong></td>
+              <td>1 día</td>
+              <td><span class="dif dif-baja">Baja</span></td>
+              <td>12 personas</td>
+              <td><strong>S/ 120</strong></td>
+              <td><a href="contacto.html" class="tabla-btn">Reservar</a></td>
+            </tr>
+            <tr>
+              <td><strong>Ica en Familia</strong></td>
+              <td>1 día</td>
+              <td><span class="dif dif-baja">Baja</span></td>
+              <td>20 personas</td>
+              <td><strong>S/ 65</strong></td>
+              <td><a href="contacto.html" class="tabla-btn">Reservar</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <h2>¿No encuentras<br />lo que buscas?</h2>
+      <p>Diseñamos itinerarios a medida para grupos, empresas y ocasiones especiales.</p>
+      <div class="cta-actions">
+        <a href="contacto.html" class="btn-primary btn-lg">Solicitar tour personalizado</a>
+        <a href="nosotros.html" class="btn-outline btn-lg">Conocer al equipo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-light">
+          <span class="logo-icon">✦</span> TurismoIca
+        </a>
+        <p>Descubre la magia del desierto peruano con los mejores guías locales.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Páginas</h4>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-links">
+        <h4>Tours</h4>
+        <a href="#tours">Buggy &amp; Sandboard</a>
+        <a href="#tours">Sobrevuelo Nazca</a>
+        <a href="#tours">Paracas &amp; Ballestas</a>
+        <a href="#tours">Pack Completo</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p>📍 Av. Grau 123, Ica, Perú</p>
+        <p>📞 +51 956 123 456</p>
+        <p>✉️ hola@turismoica.pe</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 TurismoIca. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const btns = document.querySelectorAll('#tourFiltros .filter-btn');
+    const tours = document.querySelectorAll('.tour-card');
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        tours.forEach(tour => {
+          if (filter === 'todos' || tour.dataset.cat === filter) {
+            tour.classList.remove('hidden');
+          } else {
+            tour.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
