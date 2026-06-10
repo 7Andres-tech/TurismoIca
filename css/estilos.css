@@ -280,6 +280,14 @@ ul, ol { list-style: none; }
   background: linear-gradient(145deg, #1E0E04 0%, #3D1E08 20%, #7A4010 45%, #B07820 70%, #D4A040 88%, #ECC84A 100%);
   overflow: hidden;
 }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .hero::before {
   content: '';
   position: absolute;
@@ -496,11 +504,12 @@ ul, ol { list-style: none; }
 .card-featured { grid-column: span 1; grid-row: span 2; }
 .card-img {
   height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 .card-featured .card-img { height: 240px; }
+.card-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s var(--ease); }
+.card:hover .card-img img { transform: scale(1.06); }
 .card-emoji {
   font-size: 3.5rem;
   filter: drop-shadow(0 4px 14px rgba(0,0,0,0.22));
