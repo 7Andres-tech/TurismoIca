@@ -24,7 +24,7 @@ El proyecto pone en práctica conceptos modernos de diseño web: sistema de dise
 
 ---
 
-## 🛠️ Tecnologías
+## 🛠️ Tecnologías Usadas
 
 - **HTML5** semántico
 - **CSS3** — variables, Grid, Flexbox, `clamp()`, `backdrop-filter`
